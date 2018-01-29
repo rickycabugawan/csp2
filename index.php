@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-	<title>Capstone Project 2</title>
+	<title><?php page_title(); ?></title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Monoton" rel="stylesheet">
 	<!-- <link rel="stylesheet" type="text/css" href="assets/css/bpp.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
@@ -20,7 +20,10 @@
 	<div class="top-bar">
 
 		<div class="top-bar-1 px-lg-5 py-2">
-			<div class="social-bar px-3">
+			<div class="top-bar-username text-light py-1 px-md-2">
+				<span>Welcome, <span class="username-bar">User</span></span>
+			</div>
+			<div class="social-bar pt-1 px-3">
 				<a href=""><i class="fa fa-facebook text-light" aria-hidden="true"></i></a>
 				<a href=""><i class="fa fa-twitter text-light" aria-hidden="true"></i></a>
 				<a href=""><i class="fa fa-instagram text-light" aria-hidden="true"></i></a>

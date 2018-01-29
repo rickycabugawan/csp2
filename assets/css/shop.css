@@ -1,0 +1,48 @@
+/*----price-slider-------*/
+.noUi-handle {
+	background-color: var(--danger);
+	border-color: var(--danger);
+	box-shadow: none;
+	border-radius: 12px;
+}
+
+.noUi-horizontal {
+    height: 10px;
+}
+
+.noUi-horizontal .noUi-handle {
+    top: -10px;
+}
+
+/*--------filter accordion-------*/
+
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul .inner {
+  padding-left: 1em;
+  overflow: hidden;
+  display: none;
+}
+ul .inner.show {
+  /*display: block;*/
+}
+ul li {
+  margin: .5em 0;
+}
+ul li a.toggle {
+  width: 100%;
+  display: block;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fefefe;
+  padding: .5em;
+  border-radius: 0.15em;
+  transition: background .3s ease;
+}
+ul li a.toggle:hover {
+  background: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+}

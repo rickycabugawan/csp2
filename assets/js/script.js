@@ -1,3 +1,4 @@
+/*---brand carousel --------------*/
 
 $('.brand-carousel').slick({
 	arrows:false,
@@ -22,6 +23,8 @@ $('.brand-carousel').slick({
 }
 ]});
 
+/*----------back2top button---------*/
+
   //Check to see if the window is top if not then display button
 $(window).scroll(function(){
     if ($(this).scrollTop() > 200) {
@@ -35,4 +38,35 @@ $(window).scroll(function(){
 $('.back2top').click(function(){
     $('html, body').animate({scrollTop : 0},800);
     return false;
+});
+
+/*-------price range slider----------*/
+
+var slider = $('#price-slider')[0];
+
+if (slider) {
+  noUiSlider.create(slider, {
+    start: [ 4000, 8000 ],
+    range: {
+      'min': [  2000 ],
+      'max': [ 10000 ]
+    }
+  });
+}
+
+/*-----------filter accordion--------------*/
+$('.toggle').click(function(e) {
+    e.preventDefault();
+  
+    var $this = $(this);
+  
+    if ($this.next().hasClass('show')) {
+        $this.next().removeClass('show');
+        $this.next().slideUp(350);
+    } else {
+        // $this.parent().parent().find('li .inner').removeClass('show');
+        // $this.parent().parent().find('li .inner').slideUp(350);
+        $this.next().toggleClass('show');
+        $this.next().slideToggle(350);
+    }
 });
