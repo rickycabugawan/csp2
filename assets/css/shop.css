@@ -14,9 +14,9 @@
     top: -10px;
 }
 
+
+
 /*--------filter accordion-------*/
-
-
 
 ul {
   list-style: none;
@@ -45,4 +45,20 @@ ul li a.toggle {
 ul li a.toggle:hover {
   background: rgba(0, 0, 0, 0.9);
   text-decoration: none;
+}
+
+ul.price-box {
+	display: none;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto;
+	grid-gap: 10px;
+}
+
+.price-box li {
+	grid-column: 1 / -1;
+}
+
+.price-box input {
+	width: 5em;
+	text-align: right; 
 }

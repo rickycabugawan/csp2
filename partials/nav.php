@@ -17,7 +17,7 @@
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	          <a class="dropdown-item" href="shop.php">Browse All</a>
 	          <a class="dropdown-item" href="#">Shop by Brand</a>
-	          <a class="dropdown-item" href="#">Shop by operating system</a>
+	          <a class="dropdown-item" href="#">Shop by os</a>
 	        </div>
 	      </li>
 	      <li class="nav-item">

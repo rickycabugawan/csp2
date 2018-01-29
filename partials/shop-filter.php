@@ -1,5 +1,5 @@
 
-<div class="filter text-light p-2">
+<div class="filter text-light">
 	
 	<ul class="accordion">
 		<li>
@@ -30,8 +30,8 @@
 
 		<li>
 			<a class="toggle text-uppercase" href="javascript:void(0);">price</a>
-			<ul class="inner price-box">
-			  <li>$ <input type="number" name=""> - $ <input type="number" name=""></li>
+			<ul class="inner price-box p-2">
+			  <li>$ <input type="number" id="min-price" name="min-price"> - $ <input type="number" id="max-price" name="max-price"></li>
 			  <li id="price-slider"></li>
 			</ul>
 		</li>
