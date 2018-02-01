@@ -14,9 +14,17 @@
 	}
 
 	function page_content(){
+		echo "<div class='shop-container px-lg-4 py-lg-2 p-2'>";
 		require "partials/shop-filter.php";
+		require "partials/shop-sorter.php";
+		require "partials/shop-items-list.php";
+		echo "</div>";
+		require "connection.php";
 	}
 
  ?>
-
 <?php require"template.php" ?>
+
+<script type="text/javascript">
+	$('.nav-item:nth-child(2)').addClass('active');
+</script>

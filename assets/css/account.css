@@ -1,0 +1,74 @@
+.account-container	{
+	display: grid;
+	grid-template-columns: auto;
+	grid-gap: 25px;
+}
+
+.account-container p {
+	color: var(--secondary);
+}
+
+.new-customer,
+.returning-customer {
+	display: grid;
+	grid-template-columns: auto;
+	
+}
+
+.login-box {
+	display: grid;
+	grid-template-columns: auto;
+}
+
+.login-btn,
+.continue-reg-btn {
+	justify-self:start;
+}
+
+
+
+@media only screen and (min-width: 480px) {
+	.account-container	{
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto 1fr;
+	}
+
+	.account-header {
+		grid-column: 1 / -1;
+		justify-self: center;
+	}
+
+	.new-customer {
+		grid-column: 1 / span 1;
+		grid-row: span 1 / -1;
+		grid-template-rows: auto auto 1fr auto;
+	}
+
+	.returning-customer {
+		grid-column: span 1 / -1;
+		grid-row: span 1 / -1;
+	}
+}
+
+
+@media only screen and (min-width: 960px) {
+	.account-container	{
+		grid-template-columns: 1fr 2fr 2fr 1fr;
+	}
+
+
+	.new-customer {
+		grid-column: 2 / span 1;
+		grid-row: span 1 / -1;
+		grid-template-rows: auto auto auto auto 1fr;
+	}
+
+	.returning-customer {
+		grid-column: span 1 / -2;
+		grid-row: span 1 / -1;
+	}
+	.login-box {
+		grid-gap: 10px;
+	}
+
+}

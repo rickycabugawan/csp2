@@ -13,7 +13,7 @@
 			</div>
 			<div class="top-link">
 				<a class="text-light" href="">wishlist<span class="wish-list-val">(0)</span></a>
-				<a class="text-light" href="">my account</a>
+				<a class="text-light" href="account.php">my account</a>
 			</div>
 			<div class="top-link top-link-end	">
 				<a class="text-light" href="">shopping cart</a>
@@ -25,7 +25,7 @@
 
 			<form class="form-inline m-3">
 		      <div class="input-group">
-		        <input type="text" class="form-control text-secondary" id="inlineFormInputGroup" placeholder="Search">
+		        <input type="text" class="form-control text-secondary" placeholder="Search">
 		        <div class="input-group-append">
 		          <button type="button" class="btn input-group-text"><i class="fa fa-search text-secondary" aria-hidden="true"></i></button>
 		        </div>

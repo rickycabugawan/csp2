@@ -20,3 +20,7 @@
  ?>
 
 <?php require"template.php" ?>
+
+<script type="text/javascript">
+	$('.nav-item:first-child').addClass('active');
+</script>

@@ -31,7 +31,7 @@
 			<span>Get all the latest information on Events, Sales and Offers. Sign up for our newsletter today.</span>
 			<form class="form-inline">
 		      <div class="input-group">
-		        <input type="text" class="form-control bg-light" id="inlineFormInputGroup" placeholder="Email address here">
+		        <input type="text" class="form-control bg-light" placeholder="Email address here">
 		        <div class="input-group-append">
 		          <button type="button" class="btn btn-danger text-uppercase">Signup</button>
 		        </div>
