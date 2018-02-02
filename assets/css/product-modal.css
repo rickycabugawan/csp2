@@ -34,7 +34,7 @@
 	grid-template-columns: auto auto;
 	justify-content: start;
 	grid-gap: 10px;
-	align-items: end;
+	align-items: center;
 	border-bottom: 1px solid var(--gray);
 	padding-bottom: 20px;
 }

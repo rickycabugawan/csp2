@@ -12,8 +12,8 @@
 				while($row = mysqli_fetch_assoc($result)){
 				?>
 				<div class="new-product">
-					<a class="new-product-img" href=""><img src="<?php echo $row['img'] ?>"></a>
-					<a href="" class="product-name text-secondary"><?php echo $row['productname'] ?></a>
+					<a class="new-product-img view-item-button" href="#" data-toggle="modal" data-target=".product-modal" data-index="<?php echo $row['id'] ?>"><img src="<?php echo $row['img'] ?>"></a>
+					<a href="#" class="product-name text-secondary view-item-button" data-toggle="modal" data-target=".product-modal" data-index="<?php echo $row['id'] ?>"><?php echo $row['productname'] ?></a>
 					<?php 
 					if ($row['sale']) {
 
@@ -45,8 +45,8 @@
 				while($row = mysqli_fetch_assoc($result)){
 				?>
 				<div class="new-product">
-					<a class="new-product-img" href=""><img src="<?php echo $row['img'] ?>"></a>
-					<a href="" class="product-name text-secondary"><?php echo $row['productname'] ?></a>
+					<a class="new-product-img view-item-button" href="#" data-toggle="modal" data-target=".product-modal" data-index="<?php echo $row['id'] ?>"><img src="<?php echo $row['img'] ?>"></a>
+					<a href="#" class="product-name text-secondary view-item-button" data-toggle="modal" data-target=".product-modal" data-index="<?php echo $row['id'] ?>"><?php echo $row['productname'] ?></a>
 					
 					<?php 
 					if ($row['sale']) {
@@ -79,8 +79,8 @@
 				while($row = mysqli_fetch_assoc($result)){
 				?>
 				<div class="new-product">
-					<a class="new-product-img" href=""><img src="<?php echo $row['img'] ?>"></a>
-					<a href="" class="product-name text-secondary"><?php echo $row['productname'] ?></a>
+					<a class="new-product-img view-item-button" href="#" data-toggle="modal" data-target=".product-modal" data-index="<?php echo $row['id'] ?>"><img src="<?php echo $row['img'] ?>"></a>
+					<a href="#" class="product-name text-secondary view-item-button" data-toggle="modal" data-target=".product-modal" data-index="<?php echo $row['id'] ?>"><?php echo $row['productname'] ?></a>
 					<?php 
 					if ($row['sale']) {
 

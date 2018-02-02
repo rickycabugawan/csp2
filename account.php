@@ -1,4 +1,6 @@
 <?php
+	session_start();
+	
 	function add_css(){
 		echo"<link rel='stylesheet' type='text/css' href='assets/css/account.css'>";
 	}

@@ -3,7 +3,16 @@
 
 		<div class="top-bar-1 px-lg-5 py-2">
 			<div class="top-bar-username text-light py-1 px-md-2">
-				<span>Welcome, <span class="username-bar">User</span></span>
+				<span>Welcome, <span class="username-bar">
+
+				<?php 
+					if (isset($_SESSION['user'])) {
+						echo $_SESSION['user'];
+					}
+					else{echo "Guest";}
+				?>
+				 	
+				</span></span>
 			</div>
 			<div class="social-bar pt-1 px-3">
 				<a href=""><i class="fa fa-facebook text-light" aria-hidden="true"></i></a>
@@ -13,11 +22,23 @@
 			</div>
 			<div class="top-link">
 				<a class="text-light" href="">wishlist<span class="wish-list-val">(0)</span></a>
-				<a class="text-light" href="account.php">my account</a>
+				<a class="text-light" href="cart.php">shopping cart</a>
 			</div>
 			<div class="top-link top-link-end	">
-				<a class="text-light" href="">shopping cart</a>
 				<a class="text-light" href="">checkout</a>
+				<?php
+				if (isset($_SESSION['user'])) {
+						?>
+						<a class="text-light" href="logout.php">log out</a>
+						<?php
+					}
+					else
+					{
+						?>
+						<a class="text-light" href="account.php">my account</a>
+						<?php
+					}
+				?>
 			</div>
 		</div>
 

@@ -5,6 +5,8 @@
             22 => 'assets\img\hero\pixel.jpg',
             7 => 'assets\img\hero\iphone4.jpg'
             );
+
+
 ?>
 
 
@@ -25,7 +27,7 @@
 				      <span class="hero-brand"><?php echo $row['manufacturer'] ?></span>
 				      <span class="hero-item-name"><?php echo str_replace($row['manufacturer'],"",$row['productname']) ?></span>
 				      <span class="hero-item-price"><span class="only">only </span><?php echo "₱".number_format($row['price'],2) ?></span>
-				      <button class="btn btn-danger btn-lg">shop now</button>
+				      <button class="btn btn-danger btn-lg view-item-button" data-toggle="modal" data-target=".product-modal" data-index='22'>shop now</button>
 				  	</div>
 				 <?php
 				}
@@ -45,7 +47,7 @@
 				      <span class="hero-brand"><?php echo $row['manufacturer'] ?></span>
 				      <span class="hero-item-name"><?php echo str_replace($row['manufacturer'],"",$row['productname']) ?></span>
 				      <span class="hero-item-price"><span class="only">only </span><?php echo "₱".number_format($row['price'],2) ?></span>
-				      <button class="btn btn-danger btn-lg">shop now</button>
+				      <button class="btn btn-danger btn-lg view-item-button" data-toggle="modal" data-target=".product-modal" data-index='95'>shop now</button>
 				  	</div>
 				 <?php
 				}
@@ -65,7 +67,7 @@
 				      <span class="hero-brand"><?php echo $row['manufacturer'] ?></span>
 				      <span class="hero-item-name"><?php echo str_replace($row['manufacturer'],"",$row['productname']) ?></span>
 				      <span class="hero-item-price"><span class="only">only </span><?php echo "₱".number_format($row['price'],2) ?></span>
-				      <button class="btn btn-danger btn-lg">shop now</button>
+				      <button class="btn btn-danger btn-lg view-item-button" data-toggle="modal" data-target=".product-modal" data-index='7'>shop now</button>
 				  	</div>
 				 <?php
 				}

@@ -99,7 +99,7 @@
 
 				?>
 				<div class="item-cta">
-					<button class="btn btn-danger">
+					<button class="btn btn-danger view-item-button" data-toggle="modal" data-target=".product-modal" data-index="<?php echo $row['id'] ?>">
 						<i class="fa fa-eye" aria-hidden="true"></i>
 						<span class="d-none d-lg-inline">view item</span>
 					</button>

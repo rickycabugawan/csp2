@@ -14,7 +14,7 @@ body {
 	background-color: #252525;
 }
 
-a:focus {
+button:focus, a:focus {
 	outline: none;
 }
 /*-------------navbar-----------*/
