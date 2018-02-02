@@ -44,7 +44,7 @@
 		    		<i class="fa fa-shopping-basket fa-2x" aria-hidden="true">
 		    			<span class="shopping-badge badge badge-pill badge-danger">0</span>
 		    		</i>	
-		    		<p class="m-0 text-secondary">cart:</p><span class="total">₱ 98.00</span>
+		    		<p class="m-0 text-secondary">cart:</p><span class="total">₱ 00.00</span>
 		    	</div>
 		    </div>
 

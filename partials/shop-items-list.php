@@ -100,8 +100,8 @@
 				?>
 				<div class="item-cta">
 					<button class="btn btn-danger">
-						<i class="fa fa-shopping-cart" aria-hidden="true"></i></i>
-						<span class="d-none d-lg-inline">add to cart</span>
+						<i class="fa fa-eye" aria-hidden="true"></i>
+						<span class="d-none d-lg-inline">view item</span>
 					</button>
 					<button class="btn btn-outline-secondary"><i class="fa fa-heart" aria-hidden="true"></i></button>
 				</div>

@@ -14,6 +14,9 @@ body {
 	background-color: #252525;
 }
 
+a:focus {
+	outline: none;
+}
 /*-------------navbar-----------*/
 .navbar {
 	background-color: black;
@@ -303,6 +306,12 @@ body {
 	/*filter: drop-shadow(1px 1px 1px black);*/
 	width: 100px;
 	margin:0 auto;
+	transition: all 0.5s linear;
+	transform: scale3d(1, 1, 1);
+}
+
+.brand-carousel img:hover {
+	transform: scale3d(1.2, 1.2, 1);
 }
 
 /*-------newproducts--------*/
@@ -592,6 +601,7 @@ body {
 
 	.brand-carousel img {
 	width: 200px;
+	padding: 1em;
 	}
 
 	.feature-item img {
