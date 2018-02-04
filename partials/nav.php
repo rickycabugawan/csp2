@@ -8,7 +8,7 @@
 	  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 	    <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
 	      <li class="nav-item">
-	        <a class="nav-link" href="home.php">Home</a>
+	        <a class="nav-link" href="index.php">Home</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="shop.php">Shop</a>

@@ -14,7 +14,7 @@
 	}
 
 	function page_content(){
-		require "partials/login.php";
+		require "partials/login-partial.php";
 	}
 
  ?>

@@ -36,11 +36,27 @@
 
 							?>
 							<div class="item-cta">
-								<button class="btn btn-danger view-item-button" data-toggle="modal" data-target=".product-modal" data-index="<?php echo $row['id'] ?>">
-									<i class="fa fa-eye" aria-hidden="true"></i>
-									<span class="d-none d-lg-inline">view item</span>
-								</button>
-								<button class="btn btn-outline-secondary"><i class="fa fa-heart" aria-hidden="true"></i></button>
+								<?php if($_SESSION['role'] == 'admin'){
+						?>
+						<button class="btn btn-info edit-item-button" data-index="<?php echo $row['id'] ?>">
+							<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+							<span class="d-none d-lg-inline">edit</span>
+						</button>
+						<button class="btn btn-secondary text-uppercase delete-item-button" data-index="<?php echo $row['id'] ?>"><i class="fa fa-ban" aria-hidden="true"></i><span class="d-none d-lg-inline">delete</span></button>
+
+						<?php
+					}
+					else {
+						?>
+						<button class="btn btn-danger view-item-button" data-index="<?php echo $row['id'] ?>">
+							<i class="fa fa-eye" aria-hidden="true"></i>
+							<span class="d-none d-lg-inline">view item</span>
+						</button>
+						<button class="btn btn-outline-secondary delete-item-button"><i class="fa fa-heart" aria-hidden="true"></i></button>
+						<?php
+					}
+
+					?>
 							</div>
 						</div><!-- end-feature-item -->
 					<?php

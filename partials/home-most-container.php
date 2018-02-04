@@ -12,8 +12,23 @@
 				while($row = mysqli_fetch_assoc($result)){
 				?>
 				<div class="new-product">
-					<a class="new-product-img view-item-button" href="#" data-toggle="modal" data-target=".product-modal" data-index="<?php echo $row['id'] ?>"><img src="<?php echo $row['img'] ?>"></a>
-					<a href="#" class="product-name text-secondary view-item-button" data-toggle="modal" data-target=".product-modal" data-index="<?php echo $row['id'] ?>"><?php echo $row['productname'] ?></a>
+					<?php if($_SESSION['role'] == 'admin'){
+						?>
+						<a class="new-product-img edit-item-button" href="javascript:void(0);" data-index="<?php echo $row['id'] ?>"><img src="<?php echo $row['img'] ?>"></a>
+						<a href="javascript:void(0);" class="product-name text-secondary edit-item-button" data-index="<?php echo $row['id'] ?>"><?php echo $row['productname'] ?></a>
+
+
+						<?php
+					}
+					else {
+						?>
+						<a class="new-product-img view-item-button" href="javascript:void(0);" data-index="<?php echo $row['id'] ?>"><img src="<?php echo $row['img'] ?>"></a>
+						<a href="javascript:void(0);" class="product-name text-secondary view-item-button" data-index="<?php echo $row['id'] ?>"><?php echo $row['productname'] ?></a>
+
+						<?php
+					}
+
+					?>
 					<?php 
 					if ($row['sale']) {
 
@@ -45,9 +60,23 @@
 				while($row = mysqli_fetch_assoc($result)){
 				?>
 				<div class="new-product">
-					<a class="new-product-img view-item-button" href="#" data-toggle="modal" data-target=".product-modal" data-index="<?php echo $row['id'] ?>"><img src="<?php echo $row['img'] ?>"></a>
-					<a href="#" class="product-name text-secondary view-item-button" data-toggle="modal" data-target=".product-modal" data-index="<?php echo $row['id'] ?>"><?php echo $row['productname'] ?></a>
-					
+					<?php if($_SESSION['role'] == 'admin'){
+						?>
+						<a class="new-product-img edit-item-button" href="javascript:void(0);" data-index="<?php echo $row['id'] ?>"><img src="<?php echo $row['img'] ?>"></a>
+						<a href="javascript:void(0);" class="product-name text-secondary edit-item-button" data-index="<?php echo $row['id'] ?>"><?php echo $row['productname'] ?></a>
+
+
+						<?php
+					}
+					else {
+						?>
+						<a class="new-product-img view-item-button" href="javascript:void(0);" data-index="<?php echo $row['id'] ?>"><img src="<?php echo $row['img'] ?>"></a>
+						<a href="javascript:void(0);" class="product-name text-secondary view-item-button" data-index="<?php echo $row['id'] ?>"><?php echo $row['productname'] ?></a>
+
+						<?php
+					}
+
+					?>
 					<?php 
 					if ($row['sale']) {
 
@@ -79,8 +108,25 @@
 				while($row = mysqli_fetch_assoc($result)){
 				?>
 				<div class="new-product">
-					<a class="new-product-img view-item-button" href="#" data-toggle="modal" data-target=".product-modal" data-index="<?php echo $row['id'] ?>"><img src="<?php echo $row['img'] ?>"></a>
-					<a href="#" class="product-name text-secondary view-item-button" data-toggle="modal" data-target=".product-modal" data-index="<?php echo $row['id'] ?>"><?php echo $row['productname'] ?></a>
+
+					<?php if($_SESSION['role'] == 'admin'){
+						?>
+						<a class="new-product-img edit-item-button" href="javascript:void(0);" data-index="<?php echo $row['id'] ?>"><img src="<?php echo $row['img'] ?>"></a>
+						<a href="javascript:void(0);" class="product-name text-secondary edit-item-button" data-index="<?php echo $row['id'] ?>"><?php echo $row['productname'] ?></a>
+
+
+						<?php
+					}
+					else {
+						?>
+						<a class="new-product-img view-item-button" href="javascript:void(0);" data-index="<?php echo $row['id'] ?>"><img src="<?php echo $row['img'] ?>"></a>
+						<a href="javascript:void(0);" class="product-name text-secondary view-item-button" data-index="<?php echo $row['id'] ?>"><?php echo $row['productname'] ?></a>
+
+						<?php
+					}
+
+					?>	
+
 					<?php 
 					if ($row['sale']) {
 

@@ -13,12 +13,11 @@
 	}
 
 	function page_content(){
-		require "partials/register.php";
+		if (isset($_SESSION['regsuccess'])){
+			require "partials/registration-success.php";
+			unset($_SESSION['regsuccess']);
+		}	
 	}
 
  ?>
 <?php require"template.php" ?>
-
-<!-- <script type="text/javascript">
-	$('.nav-item:nth-child(2)').addClass('active');
-</script> -->

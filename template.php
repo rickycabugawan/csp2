@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel='stylesheet' type='text/css' href='assets/css/product-modal.css'>
 	<?php add_css(); ?>
 	
 	
@@ -24,6 +25,9 @@
 	<?php page_content(); ?>
 	<?php require "partials/back2top.php" ?>
 	<?php require "partials/footer.php" ?>
+	<?php require "partials/product-modal.php"; ?>
+	<?php require "partials/alert.php" ?>
+
 	
 	<!-- scripts -->
 	<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
@@ -32,5 +36,7 @@
  	<script type="text/javascript" src="assets/js/slick.min.js"></script>
  	<?php add_js(); ?>
  	<script type="text/javascript" src="assets/js/script.js"></script>
+ 	<script type='text/javascript' src='assets/js/product-modal.js'></script>
+ 	<div></div>
 </body>
 </html>

@@ -30,8 +30,10 @@ $('.brand-carousel').slick({
 $(window).scroll(function(){
     if ($(this).scrollTop() > 200) {
         $('.back2top').fadeIn();
+        $('.basket-back2top').fadeIn();
     } else {
         $('.back2top').fadeOut();
+        $('.basket-back2top').fadeOut();
     }
 });
 
@@ -100,38 +102,40 @@ if (slider) {
 }
 
 
-/*---------shop-filter-------*/
+/*---------search-box-------*/
+function hideAutocomplete() {
+  $('.search-bar').val("");
+  $('.auto-complete').slideUp();
+
+  setTimeout(function(){$('.search-bar').removeClass('search-bar-active')},400);
+  setTimeout(function(){$('.search-bar-btn').removeClass('search-bar-btn-active')},400);
+ } 
+
+$('.search-bar').on('keyup',function () {
+  console.log($('.search-bar').val())
+  var keyWord = $('.search-bar').val();
+  if (keyWord == 0){hideAutocomplete();}
+
+  else {
+    $('.search-bar').addClass('search-bar-active');
+    $('.search-bar-btn').addClass('search-bar-btn-active');
+    $('.auto-complete').slideDown();
+
+    $.post('item-searcher.php',{
+                keyword : keyWord,
+            },function(data){
+  
+            $('.auto-complete').html(data);
+            })
+  }
+});
+
+
+$('.search-bar').blur(hideAutocomplete);
 
 
 
-// $("#price-slider")[0].noUiSlider.on('change',function() {
-//   // console.log('hello')
-//    min_price = $("#price-slider")[0].noUiSlider.get()[0];
-//    max_price = $("#price-slider")[0].noUiSlider.get()[1];
-
-//    console.log("Min price:" + min_price + "\nMax price:" + max_price );
-// });
-
-// $("input[name='os[]']").change(function() {
-// var osFilters = $("input[name='os[]']:checked").map(function() {
-//     return this.value;
-// }).get().join(', ');
-// console.log("OS:"+ osFilters);
-// });
-
-// $("input[name='manufacturer[]']").change(function() {
-// var manufacturerFilters = $("input[name='manufacturer[]']:checked").map(function() {
-//     return this.value;
-// }).get().join(', ');
-// console.log("Manufacturer:" + manufacturerFilters);
-// });
-
-// $('.sumbitFilter').click(function(){
-//   $('.filterForms').submit();
-// })
-
-
-/*----------shop-sort-------*/
+/*----------shop-sorter-------*/
 
 $('.sortby').change(function () {
 
@@ -161,3 +165,60 @@ $('.p').change(function () {
 
 })
 
+
+
+/*------cart buttons ---------*/
+
+$(document).on('click','.reload',function(){
+            var cartindex = $(this).data('index');
+            var max = $(this).data('max');
+            var quantity = $('#'+cartindex).val();
+
+            $('.alert-text').html(" Success: You have modified your shopping cart.")
+
+            $.post('changequantity.php',{
+                max : max,
+                cartindex : cartindex,
+                quantity : quantity
+            },function(data){
+            // console.log(quantity);
+            $('.success-add').hide().slideDown()
+            // $('.success-add').slideDown();
+            setTimeout(function(){  $('.success-add').fadeOut(); }, 3000);
+            $(".cart-container").load(window.location.href+" .cart-container");
+            $(".shopping-cart").load(window.location.href+" .shopping-cart");
+            })
+
+            // $(".cart-container").load(location.href+" .cart-container>*","");
+            // $(".shopping-cart").load(location.href+" .shopping-cart>*","");
+
+
+
+
+        });
+
+
+$(document).on('click','.trash',function(){
+            var cartindex = $(this).data('index');
+
+            $('.alert-text').html(" Success: You have modified your shopping cart.")
+             
+            $.post('deleteitemcart.php',{
+                cartindex : cartindex,
+            },function(data){
+            // console.log(quantity);
+            $('.success-add').hide().slideDown();
+            // $('.success-add').slideDown();
+            setTimeout(function(){  $('.success-add').fadeOut(); }, 2000);
+            $(".cart-container").load(window.location.href+" .cart-container");
+            $(".shopping-cart").load(window.location.href+" .shopping-cart");
+
+
+          })
+
+            // $(".cart-container").load(location.href+" .cart-container>*","");
+            // $(".shopping-cart").load(location.href+" .shopping-cart>*","");
+
+        })
+
+    

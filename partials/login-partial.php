@@ -1,9 +1,5 @@
 <?php 
 
-require 'connection.php';
-
-
-
 $errormsg="";
 
 if (isset($_SESSION['errormsg'])){
@@ -31,7 +27,7 @@ if (isset($_SESSION['errormsg'])){
 
 			<label class="mb-0 text-secondary" for="password"><small>Password</small></label>
 			<input class="text-secondary p-2" type="password" name="password" id="password" placeholder="Password" required>
-			<span class="password-error-box"><?php echo $errormsg ?></span>
+			<span class="password-error-box text-danger"><?php echo $errormsg; unset($_SESSION['errormsg']) ?></span>
 
 			<button class="login-btn btn btn-danger text-uppercase mt-3 px-4">Login</button>
 		</form>

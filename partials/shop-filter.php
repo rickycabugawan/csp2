@@ -32,11 +32,11 @@
 			<ul class="inner price-box py-2 px-2">
 			  <li>₱ <input class="mb-1" type="number" id="min-price" name="min-price" value="<?php 
 							if (isset($_GET['min-price']) ) {
-								echo $_GET['min-price'];
+								echo htmlspecialchars($_GET['min-price']);
 							}
 							 ?>"> - ₱ <input type="number" id="max-price" name="max-price" value="<?php 
-							if (isset($_GET['max-price']) ) {
-								echo $_GET['max-price'];
+							if (isset($_GET['max-price'])) {
+								echo htmlspecialchars($_GET['max-price']);
 							}
 							 ?>"></li>
 			  <li id="price-slider"></li>

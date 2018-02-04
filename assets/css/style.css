@@ -103,6 +103,31 @@ button:focus, a:focus {
 	color: var(--orange);
 }
 
+.search-box {
+	position: relative;
+	display: grid;
+	grid-template-columns: auto;
+}
+
+.search-bar-active {
+	border-bottom-left-radius: 0 !important;
+}
+
+.search-bar-btn-active {
+	border-bottom-right-radius: 0 !important;
+}
+
+.auto-complete {
+	display: none;
+	position: absolute;
+	top: 38px;
+	right: 0;
+	width: 100%;
+	z-index: 100000;
+	/*border-bottom-right-radius: 19px;
+	border-bottom-left-radius: 19px;*/
+}
+
 .top-bar-cta {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -378,11 +403,16 @@ button:focus, a:focus {
 }
 
 /*-------back2top---------*/
-
-.back2top {
+.back2top-container {
 	position: fixed;
 	bottom: 2em;
 	right: 2em;
+	display: grid;
+	grid-gap: 10px;
+}
+
+.back2top,
+.basket-back2top {
 	display: none;
 	box-shadow: 0 0 5px black;
 	z-index: 10;
@@ -448,7 +478,14 @@ button:focus, a:focus {
 	text-decoration: none;
 }
 
-
+.success-add {
+	position: fixed;
+	top: 5%;
+	right: 2%;
+	left: auto;
+	z-index: 100000;
+	display: none;
+}
 
 
 

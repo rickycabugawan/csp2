@@ -6,12 +6,11 @@
             7 => 'assets\img\hero\iphone4.jpg'
             );
 
-
 ?>
 
 
 <!-- carousel -->
-	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="false">
+	<div id="maincarousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="false">
 	  <div class="carousel-inner">
 	    <div class="carousel-item">
 	      <?php
@@ -27,7 +26,20 @@
 				      <span class="hero-brand"><?php echo $row['manufacturer'] ?></span>
 				      <span class="hero-item-name"><?php echo str_replace($row['manufacturer'],"",$row['productname']) ?></span>
 				      <span class="hero-item-price"><span class="only">only </span><?php echo "₱".number_format($row['price'],2) ?></span>
-				      <button class="btn btn-danger btn-lg view-item-button" data-toggle="modal" data-target=".product-modal" data-index='22'>shop now</button>
+				    
+				     <?php if($_SESSION['role'] == 'admin'){
+						?>
+						<button class="btn btn-info btn-lg edit-item-button" data-index='22'>edit item</button>
+
+						<?php
+					}
+					else {
+						?>
+						<button class="btn btn-danger btn-lg view-item-button" data-index='22'>shop now</button>
+						<?php
+					}
+					?> 
+
 				  	</div>
 				 <?php
 				}
@@ -47,7 +59,18 @@
 				      <span class="hero-brand"><?php echo $row['manufacturer'] ?></span>
 				      <span class="hero-item-name"><?php echo str_replace($row['manufacturer'],"",$row['productname']) ?></span>
 				      <span class="hero-item-price"><span class="only">only </span><?php echo "₱".number_format($row['price'],2) ?></span>
-				      <button class="btn btn-danger btn-lg view-item-button" data-toggle="modal" data-target=".product-modal" data-index='95'>shop now</button>
+				      <?php if($_SESSION['role'] == 'admin'){
+						?>
+						<button class="btn btn-info btn-lg edit-item-button" data-index='95'>edit item</button>
+
+						<?php
+					}
+					else {
+						?>
+						<button class="btn btn-danger btn-lg view-item-button" data-index='95'>shop now</button>
+						<?php
+					}
+					?>
 				  	</div>
 				 <?php
 				}
@@ -67,7 +90,18 @@
 				      <span class="hero-brand"><?php echo $row['manufacturer'] ?></span>
 				      <span class="hero-item-name"><?php echo str_replace($row['manufacturer'],"",$row['productname']) ?></span>
 				      <span class="hero-item-price"><span class="only">only </span><?php echo "₱".number_format($row['price'],2) ?></span>
-				      <button class="btn btn-danger btn-lg view-item-button" data-toggle="modal" data-target=".product-modal" data-index='7'>shop now</button>
+				      <?php if($_SESSION['role'] == 'admin'){
+						?>
+						<button class="btn btn-info btn-lg edit-item-button" data-index='7'>edit item</button>
+
+						<?php
+					}
+					else {
+						?>
+						<button class="btn btn-danger btn-lg view-item-button" data-index='7'>shop now</button>
+						<?php
+					}
+					?>
 				  	</div>
 				 <?php
 				}

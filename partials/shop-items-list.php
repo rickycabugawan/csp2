@@ -40,10 +40,10 @@
 					$query_sort="ORDER BY productname DESC";
 					break;
 			case 'price_asc':
-					$query_sort="ORDER BY price ASC";
+					$query_sort="ORDER BY finalprice ASC";
 					break;
 			case 'price_desc':
-					$query_sort="ORDER BY price DESC";
+					$query_sort="ORDER BY finalprice DESC";
 					break;
 			case 'sale_percent_desc':
 					$query_sort="ORDER BY sale_percent DESC";
@@ -65,7 +65,7 @@
 	}
 
 
-	$sql="SELECT * FROM productlist WHERE $query_os $query_manufacturer price BETWEEN $query_minprice AND $query_maxprice $query_sort $query_limit $query_p";
+	$sql="SELECT *,(price-price*(sale_percent/100*sale)) as finalprice FROM productlist WHERE $query_os $query_manufacturer (price-price*(sale_percent/100*sale)) BETWEEN $query_minprice AND $query_maxprice $query_sort $query_limit $query_p";
 
 	// echo $sql;
 	$result = mysqli_query($conn,$sql);
@@ -99,11 +99,30 @@
 
 				?>
 				<div class="item-cta">
-					<button class="btn btn-danger view-item-button" data-toggle="modal" data-target=".product-modal" data-index="<?php echo $row['id'] ?>">
-						<i class="fa fa-eye" aria-hidden="true"></i>
-						<span class="d-none d-lg-inline">view item</span>
-					</button>
-					<button class="btn btn-outline-secondary"><i class="fa fa-heart" aria-hidden="true"></i></button>
+					
+					<?php if($_SESSION['role'] == 'admin'){
+						?>
+						<button class="btn btn-info edit-item-button" data-index="<?php echo $row['id'] ?>">
+							<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+							<span class="d-none d-lg-inline">edit</span>
+						</button>
+						<button class="btn btn-secondary text-uppercase delete-item-button" data-index="<?php echo $row['id'] ?>"><i class="fa fa-ban" aria-hidden="true"></i><span class="d-none d-lg-inline">delete</span></button>
+
+
+
+						<?php
+					}
+					else {
+						?>
+						<button class="btn btn-danger view-item-button" data-index="<?php echo $row['id'] ?>">
+							<i class="fa fa-eye" aria-hidden="true"></i>
+							<span class="d-none d-lg-inline">view item</span>
+						</button>
+						<button class="btn btn-outline-secondary"><i class="fa fa-heart" aria-hidden="true"></i></button>
+						<?php
+					}
+
+					?>
 				</div>
 			</div><!-- end-shop-item -->
 			<?php
