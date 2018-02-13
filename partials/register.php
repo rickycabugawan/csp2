@@ -115,7 +115,7 @@ if (isset($_SESSION['errorconfirmpassword'])){
 				<span class="errormsg-reg text-danger"><?php echo $errorconfirmpassword; unset($_SESSION['errorconfirmpassword']) ?></span>
 			</div>
 			<div class="policy-box">
-				<span><input type="checkbox" id="policy" name="policy" value="1" required=""> <label for="policy">I have read and agree to the <a class="text-secondary" href="#">Privacy Policy</a>. </label><span class="policyerror text-danger"></span></span>
+				<span><input type="checkbox" id="policy" name="policy" value="1" required=""> <label for="policy">I have read and agree to the <a class="text-secondary" data-toggle="modal" href="#modalPrivacy">Privacy Policy</a>. </label><span class="policyerror text-danger"></span></span>
 				<button class="btn btn-danger px-lg-5 py-lg-2 text-uppercase ">Register</button>
 			</div>
 		</form>

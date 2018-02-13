@@ -36,7 +36,7 @@
 
 							?>
 							<div class="item-cta">
-								<?php if($_SESSION['role'] == 'admin'){
+								<?php if(isset($_SESSION['role']) && ($_SESSION['role'] == 'admin')){
 						?>
 						<button class="btn btn-info edit-item-button" data-index="<?php echo $row['id'] ?>">
 							<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
@@ -52,7 +52,7 @@
 							<i class="fa fa-eye" aria-hidden="true"></i>
 							<span class="d-none d-lg-inline">view item</span>
 						</button>
-						<button class="btn btn-outline-secondary delete-item-button"><i class="fa fa-heart" aria-hidden="true"></i></button>
+						<button class="btn btn-outline-secondary"><i class="fa fa-heart" aria-hidden="true"></i></button>
 						<?php
 					}
 

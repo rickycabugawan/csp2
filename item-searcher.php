@@ -12,7 +12,7 @@ if(mysqli_num_rows($result) > 0){
 
 		 // echo $row['productname']."<br>";
 
-		if(($_SESSION['role']) == 'admin'){
+		if(isset($_SESSION['role']) && ($_SESSION['role'] == 'admin')){
 
 		echo "<a class='edit-item-button text-dark' data-index=".$row['id']."  href='#'>".$row['productname']."</a><br>";
 

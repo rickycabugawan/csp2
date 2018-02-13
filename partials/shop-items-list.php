@@ -67,6 +67,16 @@
 
 	$sql="SELECT *,(price-price*(sale_percent/100*sale)) as finalprice FROM productlist WHERE $query_os $query_manufacturer (price-price*(sale_percent/100*sale)) BETWEEN $query_minprice AND $query_maxprice $query_sort $query_limit $query_p";
 
+	if(isset($_SESSION['role']) && ($_SESSION['role'] == 'admin')){
+	?>
+		<div class="shop-item">
+			<button class="additem-button btn bg-transparent"><i class="text-light fa fa-plus fa-5x" aria-hidden="true"></i></button>
+		</div><!-- end-shop-item -->
+	<?php
+	}
+
+
+
 	// echo $sql;
 	$result = mysqli_query($conn,$sql);
 	while($row = mysqli_fetch_assoc($result)){
@@ -100,7 +110,7 @@
 				?>
 				<div class="item-cta">
 					
-					<?php if($_SESSION['role'] == 'admin'){
+					<?php if(isset($_SESSION['role']) && ($_SESSION['role'] == 'admin')){
 						?>
 						<button class="btn btn-info edit-item-button" data-index="<?php echo $row['id'] ?>">
 							<i class="fa fa-pencil-square-o" aria-hidden="true"></i>

@@ -14,6 +14,8 @@
 
 	function page_content(){
 		require "partials/register.php";
+                
+                
 	}
 
  ?>

@@ -12,7 +12,7 @@
 				while($row = mysqli_fetch_assoc($result)){
 				?>
 				<div class="new-product">
-					<?php if($_SESSION['role'] == 'admin'){
+					<?php if(isset($_SESSION['role']) && ($_SESSION['role'] == 'admin')){
 						?>
 						<a class="new-product-img edit-item-button" href="javascript:void(0);" data-index="<?php echo $row['id'] ?>"><img src="<?php echo $row['img'] ?>"></a>
 						<a href="javascript:void(0);" class="product-name text-secondary edit-item-button" data-index="<?php echo $row['id'] ?>"><?php echo $row['productname'] ?></a>
@@ -60,7 +60,7 @@
 				while($row = mysqli_fetch_assoc($result)){
 				?>
 				<div class="new-product">
-					<?php if($_SESSION['role'] == 'admin'){
+					<?php if(isset($_SESSION['role']) && ($_SESSION['role'] == 'admin')){
 						?>
 						<a class="new-product-img edit-item-button" href="javascript:void(0);" data-index="<?php echo $row['id'] ?>"><img src="<?php echo $row['img'] ?>"></a>
 						<a href="javascript:void(0);" class="product-name text-secondary edit-item-button" data-index="<?php echo $row['id'] ?>"><?php echo $row['productname'] ?></a>
@@ -109,7 +109,7 @@
 				?>
 				<div class="new-product">
 
-					<?php if($_SESSION['role'] == 'admin'){
+					<?php if(isset($_SESSION['role']) && ($_SESSION['role'] == 'admin')){
 						?>
 						<a class="new-product-img edit-item-button" href="javascript:void(0);" data-index="<?php echo $row['id'] ?>"><img src="<?php echo $row['img'] ?>"></a>
 						<a href="javascript:void(0);" class="product-name text-secondary edit-item-button" data-index="<?php echo $row['id'] ?>"><?php echo $row['productname'] ?></a>

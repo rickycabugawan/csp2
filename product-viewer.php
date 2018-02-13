@@ -20,6 +20,7 @@ while($row = mysqli_fetch_assoc($result)){
     <div class='modal-info-box'>
     	<h4 class='modal-info-name text-dark text-uppercase'><?php echo $row['productname'] ?></h4>
     	<div class='text-muted'>Brand: <?php echo $row['manufacturer'] ?></div>
+        <div class='text-muted'>OS: <?php echo $row['os'] ?></div>
     	<div class='d-none d-md-block text-muted'><?php echo nl2br($row['description']) ?></div>
     	<div class='text-muted'>Stock: <?php echo $row['stock'] ?></div>
     </div>
@@ -103,7 +104,7 @@ while($row = mysqli_fetch_assoc($result)){
             $('.success-add').slideDown();
             setTimeout(function(){  $('.success-add').fadeOut(); }, 3000);
             })
-
+            $('.product-modal').modal('hide');
             // $(".shopping-cart").load(location.href+" .shopping-cart>*","");
             $(".shopping-cart").load(window.location.href+" .shopping-cart")
             $(".cart-container").load(window.location.href+" .cart-container");

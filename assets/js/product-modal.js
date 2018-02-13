@@ -30,6 +30,15 @@ $(document).on('click','.delete-item-button',function(){
 	})
 })
 
+$(document).on('click','.additem-button',function(){
+	$.post('product-adder.php',{
+		// index : 1	
+	},function(data){
+		$(".modal-content").html(data);
+		$('.product-modal').modal();
+	})
+})
+
 
 $('.product-modal').on('hidden.bs.modal', function (e) {
   $(".modal-content").html("");

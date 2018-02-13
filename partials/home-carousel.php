@@ -27,7 +27,7 @@
 				      <span class="hero-item-name"><?php echo str_replace($row['manufacturer'],"",$row['productname']) ?></span>
 				      <span class="hero-item-price"><span class="only">only </span><?php echo "₱".number_format($row['price'],2) ?></span>
 				    
-				     <?php if($_SESSION['role'] == 'admin'){
+				     <?php if(isset($_SESSION['role']) && ($_SESSION['role'] == 'admin')){
 						?>
 						<button class="btn btn-info btn-lg edit-item-button" data-index='22'>edit item</button>
 
@@ -59,7 +59,7 @@
 				      <span class="hero-brand"><?php echo $row['manufacturer'] ?></span>
 				      <span class="hero-item-name"><?php echo str_replace($row['manufacturer'],"",$row['productname']) ?></span>
 				      <span class="hero-item-price"><span class="only">only </span><?php echo "₱".number_format($row['price'],2) ?></span>
-				      <?php if($_SESSION['role'] == 'admin'){
+				      <?php if(isset($_SESSION['role']) && ($_SESSION['role'] == 'admin')){
 						?>
 						<button class="btn btn-info btn-lg edit-item-button" data-index='95'>edit item</button>
 
@@ -90,7 +90,7 @@
 				      <span class="hero-brand"><?php echo $row['manufacturer'] ?></span>
 				      <span class="hero-item-name"><?php echo str_replace($row['manufacturer'],"",$row['productname']) ?></span>
 				      <span class="hero-item-price"><span class="only">only </span><?php echo "₱".number_format($row['price'],2) ?></span>
-				      <?php if($_SESSION['role'] == 'admin'){
+				      <?php if(isset($_SESSION['role']) && ($_SESSION['role'] == 'admin')){
 						?>
 						<button class="btn btn-info btn-lg edit-item-button" data-index='7'>edit item</button>
 
